@@ -53,9 +53,10 @@ export default async function Hero() {
           <Link
             href={href}
             key={name}
+            title={name}
             target='_blank'
             className={classNames('group', {
-              'hover:scale-150 transition': expandOnHover,
+              'hover:scale-150 focus:scale-150 transition': expandOnHover,
             })}>
             <Icon />
           </Link>

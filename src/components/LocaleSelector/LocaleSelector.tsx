@@ -17,6 +17,8 @@ const LocaleSelector = () => {
     <select value={locale} onChange={handleChange}>
       <option value='en'>English</option>
       <option value='kn-IN'>ಕನ್ನಡ</option>
+      {/* <option value='te-IN'>తెలుగు</option>
+      <option value='hi-IN'>हिन्दी</option> */}
     </select>
   )
 }

@@ -31,8 +31,8 @@ export default function InstagramIcon() {
         />
         <linearGradient id='b'>
           <stop stopColor='#3771c8' offset='0' />
-          <stop offset='.128' stop-color='#3771c8' />
-          <stop stop-opacity='0' stop-color='#60f' offset='1' />
+          <stop offset='.128' stopColor='#3771c8' />
+          <stop stopOpacity='0' stopColor='#60f' offset='1' />
         </linearGradient>
         <linearGradient id='a'>
           <stop stopColor='#fd5' offset='0' />

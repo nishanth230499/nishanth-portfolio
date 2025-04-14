@@ -6,9 +6,21 @@ import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 const themes = [
-  { name: 'light', icon: <Sun strokeWidth={2.5} size={16} /> },
-  { name: 'system', icon: <Monitor strokeWidth={2.5} size={16} /> },
-  { name: 'dark', icon: <Moon strokeWidth={2.5} size={16} /> },
+  {
+    name: 'light',
+    label: 'Light Theme',
+    icon: <Sun strokeWidth={2.5} size={16} />,
+  },
+  {
+    name: 'system',
+    label: 'System Theme',
+    icon: <Monitor strokeWidth={2.5} size={16} />,
+  },
+  {
+    name: 'dark',
+    label: 'Dark Theme',
+    icon: <Moon strokeWidth={2.5} size={16} />,
+  },
 ]
 export default function ThemeSelector() {
   const { theme, setTheme } = useTheme()
@@ -24,7 +36,7 @@ export default function ThemeSelector() {
     <div
       role='radiogroup'
       className='border border-border-color rounded-full p-1'>
-      {themes.map(({ name, icon }) => (
+      {themes.map(({ name, icon, label }) => (
         <button
           key={name}
           aria-checked={theme === name}
@@ -37,6 +49,7 @@ export default function ThemeSelector() {
             'p-2 rounded-full opacity-50 hover:opacity-100 focus:opacity-100',
             { 'opacity-100 bg-selected-background': theme === name }
           )}
+          title={label}
           onClick={() => setTheme(name)}>
           {icon}
         </button>

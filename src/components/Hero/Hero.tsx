@@ -43,10 +43,10 @@ export default async function Hero() {
   const t = await getTranslations('HomePage')
   return (
     <section>
-      <p className='text-6xl font-bold'>
+      <p className='text-4xl md:text-6xl font-bold'>
         {t('hi')}, {t("i'm")}{' '}
       </p>
-      <p className='text-6xl font-bold text-primary'>{t('name')}</p>
+      <p className='text-4xl md:text-6xl font-bold text-primary'>{t('name')}</p>
       <p className='my-4 text-xl'>{t('tagline')}</p>
       <div className='flex gap-4 items-center'>
         {heroLinks.map(({ Icon, name, href, expandOnHover }) => (

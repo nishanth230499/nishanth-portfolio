@@ -1,4 +1,4 @@
-export default function WebpackLogo() {
+export default function WebpackIcon() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

@@ -1,4 +1,4 @@
-export default async function HTMLIcon() {
+export default function HTMLIcon() {
   return (
     <svg
       width='50px'

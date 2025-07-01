@@ -1,4 +1,4 @@
-export default async function ReactIcon() {
+export default function ReactIcon() {
   return (
     <svg
       width='50px'

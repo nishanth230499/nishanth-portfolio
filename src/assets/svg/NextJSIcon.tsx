@@ -1,4 +1,4 @@
-export default async function NextJSIcon() {
+export default function NextJSIcon() {
   return (
     <svg
       width='50px'

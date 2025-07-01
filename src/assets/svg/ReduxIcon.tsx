@@ -1,4 +1,4 @@
-export default async function ReduxLogo() {
+export default function ReduxIcon() {
   return (
     <svg
       width='50'

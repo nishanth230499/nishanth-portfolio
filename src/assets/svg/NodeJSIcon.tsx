@@ -1,4 +1,4 @@
-export default async function NodeJSIcon() {
+export default function NodeJSIcon() {
   return (
     <svg
       width='81.40244'
@@ -86,11 +86,11 @@ export default async function NodeJSIcon() {
           x2='102.227'
           y2='114.729'
           gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#3F873F'></stop>
-          <stop offset='0.3296' stop-color='#3F8B3D'></stop>
-          <stop offset='0.6367' stop-color='#3E9638'></stop>
-          <stop offset='0.9341' stop-color='#3DA92E'></stop>
-          <stop offset='1' stop-color='#3DAE2B'></stop>
+          <stop stopColor='#3F873F'></stop>
+          <stop offset='0.3296' stopColor='#3F8B3D'></stop>
+          <stop offset='0.6367' stopColor='#3E9638'></stop>
+          <stop offset='0.9341' stopColor='#3DA92E'></stop>
+          <stop offset='1' stopColor='#3DAE2B'></stop>
         </linearGradient>
         <linearGradient
           id='paint1_linear_337_7901'
@@ -99,10 +99,10 @@ export default async function NodeJSIcon() {
           x2='191.215'
           y2='29.7213'
           gradientUnits='userSpaceOnUse'>
-          <stop offset='0.1376' stop-color='#3F873F'></stop>
-          <stop offset='0.4016' stop-color='#52A044'></stop>
-          <stop offset='0.7129' stop-color='#64B749'></stop>
-          <stop offset='0.9081' stop-color='#6ABF4B'></stop>
+          <stop offset='0.1376' stopColor='#3F873F'></stop>
+          <stop offset='0.4016' stopColor='#52A044'></stop>
+          <stop offset='0.7129' stopColor='#64B749'></stop>
+          <stop offset='0.9081' stopColor='#6ABF4B'></stop>
         </linearGradient>
         <linearGradient
           id='paint2_linear_337_7901'
@@ -111,10 +111,10 @@ export default async function NodeJSIcon() {
           x2='153.304'
           y2='83.4042'
           gradientUnits='userSpaceOnUse'>
-          <stop offset='0.0919165' stop-color='#6ABF4B'></stop>
-          <stop offset='0.2871' stop-color='#64B749'></stop>
-          <stop offset='0.5984' stop-color='#52A044'></stop>
-          <stop offset='0.8624' stop-color='#3F873F'></stop>
+          <stop offset='0.0919165' stopColor='#6ABF4B'></stop>
+          <stop offset='0.2871' stopColor='#64B749'></stop>
+          <stop offset='0.5984' stopColor='#52A044'></stop>
+          <stop offset='0.8624' stopColor='#3F873F'></stop>
         </linearGradient>
         <clipPath id='clip0_337_7901'>
           <rect width='319' height='195' fill='white'></rect>

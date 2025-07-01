@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+// import { getTranslations } from 'next-intl/server'
 import LinkedinIcon from '@/assets/svg/LinkedinIcon'
 import { Link } from '@/i18n/navigation'
 import GithubIcon from '@/assets/svg/GithubIcon'
@@ -7,6 +7,7 @@ import FacebookIcon from '@/assets/svg/FacebookIcon'
 import InstagramIcon from '@/assets/svg/InstagramIcon'
 import classNames from 'classnames'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 const heroLinks = [
   {
@@ -22,7 +23,7 @@ const heroLinks = [
     expandOnHover: true,
   },
   {
-    name: 'GitHub',
+    name: 'LeetCode',
     Icon: LeetCodeIcon,
     href: 'https://leetcode.com/u/nishanth230499/',
     expandOnHover: true,
@@ -40,10 +41,13 @@ const heroLinks = [
   },
 ]
 
-export default async function Hero() {
-  const t = await getTranslations('HomePage')
+export default function Hero({ ref }: { ref?: any }) {
+  // const t = await getTranslations('HomePage')
+  const t = useTranslations('HomePage')
   return (
-    <section className='flex flex-col items-center gap-4 md:flex-row md:gap-8'>
+    <section
+      className='flex flex-col items-center gap-4 md:flex-row md:gap-8 bg-(--background)'
+      ref={ref}>
       <Image
         src='/profile_image.jpg'
         alt='profile-image'

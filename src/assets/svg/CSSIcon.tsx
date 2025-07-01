@@ -1,4 +1,4 @@
-export default async function CSSIcon() {
+export default function CSSIcon() {
   return (
     <svg
       width='50'

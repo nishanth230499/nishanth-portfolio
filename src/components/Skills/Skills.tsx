@@ -19,6 +19,7 @@ import ReactIcon from '@/assets/svg/ReactIcon'
 import ReduxIcon from '@/assets/svg/ReduxIcon'
 import TypeScriptIcon from '@/assets/svg/TypeScriptIcon'
 import WebpackIcon from '@/assets/svg/WebpackIcon'
+import { Ref } from 'react'
 
 const skills = [
   { name: 'JavaScript', Icon: JavaScriptIcon },
@@ -45,7 +46,7 @@ const skills = [
   { name: 'Docker', Icon: DockerIcon },
 ]
 
-export default function Skills({ ref }: { ref?: any }) {
+export default function Skills({ ref }: { ref?: Ref<HTMLElement> }) {
   return (
     <section ref={ref} className='bg-(--background)'>
       <p className='text-4xl font-bold text-primary text-center mb-4'>Skills</p>

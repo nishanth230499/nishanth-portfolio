@@ -8,6 +8,7 @@ import InstagramIcon from '@/assets/svg/InstagramIcon'
 import classNames from 'classnames'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { Ref } from 'react'
 
 const heroLinks = [
   {
@@ -41,7 +42,7 @@ const heroLinks = [
   },
 ]
 
-export default function Hero({ ref }: { ref?: any }) {
+export default function Hero({ ref }: { ref?: Ref<HTMLElement> }) {
   // const t = await getTranslations('HomePage')
   const t = useTranslations('HomePage')
   return (

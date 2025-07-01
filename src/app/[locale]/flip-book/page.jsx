@@ -1,7 +1,6 @@
 'use client'
 
 import AppFooter from '@/components/AppFooter/AppFooter'
-import AppHeader from '@/components/AppHeader/AppHeader'
 import Hero from '@/components/Hero/Hero'
 import Skills from '@/components/Skills/Skills'
 import useWindowDimensions from '@/hooks/useWindowDimaensions'
@@ -17,7 +16,9 @@ export default function Home() {
           height={height ?? 0}
           width={width ?? 0}
           showCover
-          disableFlipByClick>
+          disableFlipByClick
+          // Dummy params
+        >
           {/* <div className='lg:w-4xl xl:w-6xl mx-4 lg:mx-auto flex flex-col gap-16'> */}
           <Hero />
           <Skills />

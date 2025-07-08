@@ -1,3 +1,5 @@
+'use client'
+
 import AWSIcon from '@/assets/svg/AWSIcon'
 import CSSIcon from '@/assets/svg/CSSIcon'
 import DjangoIcon from '@/assets/svg/DjangoIcon'
@@ -19,7 +21,6 @@ import ReactIcon from '@/assets/svg/ReactIcon'
 import ReduxIcon from '@/assets/svg/ReduxIcon'
 import TypeScriptIcon from '@/assets/svg/TypeScriptIcon'
 import WebpackIcon from '@/assets/svg/WebpackIcon'
-import { Ref } from 'react'
 
 const skills = [
   { name: 'JavaScript', Icon: JavaScriptIcon },
@@ -46,22 +47,20 @@ const skills = [
   { name: 'Docker', Icon: DockerIcon },
 ]
 
-export default function Skills({ ref }: { ref?: Ref<HTMLElement> }) {
+export default function Skills() {
   return (
-    <section ref={ref} className='bg-(--background)'>
-      <p className='text-4xl font-bold text-primary text-center mb-4'>Skills</p>
-      <div className='grid gap-y-4 gap-x-2 md:gap-8 grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8'>
-        {skills.map(({ name, Icon }) => (
-          <button
-            key={name}
-            className='group hover:scale-120 focus:scale-120 transition bg-(--background) cursor-pointer'>
-            <div className='w-full flex flex-col items-center gap-2 p-2'>
-              <Icon />
-              <p className='text-center'>{name}</p>
-            </div>
-          </button>
-        ))}
-      </div>
-    </section>
+    <div className='grid gap-y-4 gap-x-2 md:gap-8 grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8'>
+      {skills.map(({ name, Icon }) => (
+        <button
+          key={name}
+          className='group hover:scale-120 focus:scale-120 transition bg-(--background) cursor-pointer'
+          onClick={() => {}}>
+          <div className='w-full flex flex-col items-center gap-2 p-2'>
+            <Icon />
+            <p className='text-center'>{name}</p>
+          </div>
+        </button>
+      ))}
+    </div>
   )
 }

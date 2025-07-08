@@ -45,7 +45,7 @@ export default function Hero() {
   // const t = await getTranslations('HomePage')
   const t = useTranslations('HomePage')
   return (
-    <section className='flex flex-col items-center gap-4 md:flex-row md:gap-8 bg-(--background)'>
+    <div className='flex flex-col items-center gap-4 md:flex-row md:gap-8'>
       <Image
         src='/profile_image.jpg'
         alt='profile-image'
@@ -61,10 +61,10 @@ export default function Hero() {
         height={300}
       />
       <div>
-        <p className='text-4xl font-bold'>
-          {t('hi')}, {t("i'm")}{' '}
-        </p>
-        <p className='text-5xl font-bold text-primary'>{t('name')}</p>
+        <h2 className='text-4xl font-bold'>
+          {t('hi')}, {t("i'm")}
+        </h2>
+        <h2 className='text-5xl font-bold text-primary'>{t('name')}</h2>
         <p className='my-4 text-xl'>{t('tagline')}</p>
         <div className='flex gap-4 items-center'>
           {heroLinks.map(({ Icon, name, href, expandOnHover }) => (
@@ -81,6 +81,6 @@ export default function Hero() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }

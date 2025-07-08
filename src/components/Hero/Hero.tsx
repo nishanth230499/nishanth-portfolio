@@ -8,7 +8,6 @@ import InstagramIcon from '@/assets/svg/InstagramIcon'
 import classNames from 'classnames'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Ref } from 'react'
 
 const heroLinks = [
   {
@@ -42,13 +41,11 @@ const heroLinks = [
   },
 ]
 
-export default function Hero({ ref }: { ref?: Ref<HTMLElement> }) {
+export default function Hero() {
   // const t = await getTranslations('HomePage')
   const t = useTranslations('HomePage')
   return (
-    <section
-      className='flex flex-col items-center gap-4 md:flex-row md:gap-8 bg-(--background)'
-      ref={ref}>
+    <section className='flex flex-col items-center gap-4 md:flex-row md:gap-8 bg-(--background)'>
       <Image
         src='/profile_image.jpg'
         alt='profile-image'

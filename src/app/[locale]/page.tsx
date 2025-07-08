@@ -12,7 +12,7 @@ export default function Home() {
       <main>
         <div className='lg:w-4xl xl:w-6xl mx-4 lg:mx-auto flex flex-col gap-16'>
           <Section>
-            <Hero />
+            <Hero responsive />
           </Section>
           <Section title='About Me'>
             <AboutMe />

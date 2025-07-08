@@ -41,11 +41,14 @@ const heroLinks = [
   },
 ]
 
-export default function Hero() {
+export default function Hero({ responsive }: { responsive?: boolean }) {
   // const t = await getTranslations('HomePage')
   const t = useTranslations('HomePage')
   return (
-    <div className='flex flex-col items-center gap-4 md:flex-row md:gap-8'>
+    <div
+      className={classNames('flex flex-col items-center gap-4', {
+        'md:flex-row md:gap-8': responsive,
+      })}>
       <Image
         src='/profile_image.jpg'
         alt='profile-image'

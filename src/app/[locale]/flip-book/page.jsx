@@ -47,22 +47,22 @@ export default function Home() {
             type='right'>
             <Hero />
           </Page>
+          {dualPage && (
+            <Page
+              onPreviousPage={onPreviousPage}
+              onNextPage={onNextPage}
+              dualPage={dualPage}
+              type='left'></Page>
+          )}
           <Page
             onPreviousPage={onPreviousPage}
             onNextPage={onNextPage}
             title='About Me'
             dualPage={dualPage}
-            type='left'>
+            type='right'>
             <AboutMe />
           </Page>
-          <Page
-            onPreviousPage={onPreviousPage}
-            onNextPage={onNextPage}
-            title='Skills'
-            dualPage={dualPage}
-            type='right'>
-            <Skills />
-          </Page>
+
           <Page
             onPreviousPage={onPreviousPage}
             onNextPage={onNextPage}
@@ -71,6 +71,7 @@ export default function Home() {
             type='left'>
             <Skills />
           </Page>
+
           <Page
             onPreviousPage={onPreviousPage}
             onNextPage={onNextPage}
@@ -79,12 +80,22 @@ export default function Home() {
             type='right'>
             <Skills />
           </Page>
+
           <Page
             onPreviousPage={onPreviousPage}
             onNextPage={onNextPage}
             title='Skills'
             dualPage={dualPage}
             type='left'>
+            <Skills />
+          </Page>
+
+          <Page
+            onPreviousPage={onPreviousPage}
+            onNextPage={onNextPage}
+            title='Skills'
+            dualPage={dualPage}
+            type='right'>
             <Skills />
           </Page>
         </HTMLFlipBook>

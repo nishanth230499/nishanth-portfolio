@@ -8,6 +8,7 @@ import InstagramIcon from '@/assets/svg/InstagramIcon'
 import classNames from 'classnames'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import ThemeSelector from '../ThemeSelector/ThemeSelector'
 
 const heroLinks = [
   {
@@ -41,9 +42,16 @@ const heroLinks = [
   },
 ]
 
-export default function Hero({ dualPage }: { dualPage?: boolean }) {
+export default function Hero({
+  dualPage,
+  showAppHeader = false,
+}: {
+  dualPage?: boolean
+  showAppHeader?: boolean
+}) {
   // const t = await getTranslations('HomePage')
   const t = useTranslations('HomePage')
+
   return (
     <div
       className={classNames('flex flex-col items-center gap-4', {
@@ -53,8 +61,8 @@ export default function Hero({ dualPage }: { dualPage?: boolean }) {
         src='/profile_image.jpg'
         alt='profile-image'
         className='rounded-full md:hidden'
-        width={250}
-        height={250}
+        width={200}
+        height={200}
       />
       <Image
         src='/profile_image.jpg'
@@ -85,6 +93,15 @@ export default function Hero({ dualPage }: { dualPage?: boolean }) {
             </Link>
           ))}
         </div>
+        {showAppHeader ? (
+          <div className='flex gap-2 my-4'>
+            <ThemeSelector />
+          </div>
+        ) : (
+          <div className='flex gap-2 my-4'>
+            <Link href={`/flip-book`}>View Book Version of Portfolio</Link>
+          </div>
+        )}
       </div>
     </div>
   )

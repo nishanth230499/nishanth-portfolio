@@ -8,11 +8,16 @@ import AboutMe from '@/components/AboutMe/AboutMe'
 import useWindowDimensions from '@/hooks/useWindowDimaensions'
 import { useMemo, useRef } from 'react'
 import HTMLFlipBook from 'react-pageflip'
+import AppHeader from '@/components/AppHeader/AppHeader'
 
 const getPages = (dualPage) => {
   return [
     {
-      component: Hero,
+      component: (props) => (
+        <>
+          <Hero {...props} showAppHeader />
+        </>
+      ),
       type: 'right',
     },
     ...(dualPage
@@ -69,7 +74,7 @@ export default function Home() {
           width={pageWidth}
           showCover
           disableFlipByClick
-          swipeDistance={1000}
+          swipeDistance={20}
           // Dummy params
         >
           {getPages(dualPage).map((page, index) => (

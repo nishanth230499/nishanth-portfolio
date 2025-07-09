@@ -21,10 +21,11 @@ export default function Page({
       ref={ref}
       className={classNames(
         // 'relative h-full w-full shadow-lg bg-(--background)',
-        'relative h-full w-full shadow-lg bg-[url(/paper-light.webp)] dark:bg-[url(/paper-dark.jpg)] bg-cover bg-center',
+        'relative h-full w-full shadow-lg book-page',
         {
-          'rounded-r-2xl rounded-l-md': type === 'right',
-          'rounded-l-2xl rounded-r-md': type === 'left',
+          'rounded-l-2xl rounded-r-2xl': !dualPage,
+          'rounded-r-2xl rounded-l-md': dualPage && type === 'right',
+          'rounded-l-2xl rounded-r-md': dualPage && type === 'left',
         }
       )}>
       <div className='flex flex-col h-full px-4 md:px-12 pb-12'>

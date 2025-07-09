@@ -26,6 +26,20 @@
   --border-color: #414869;
 }
 
+.dark .book-page {
+  --background: #23283e;
+  background-image: none;
+  /* background-image: url('/paper-dark.jpg'); */
+  background-color: #23283e;
+}
+
+.book-page {
+  background-size: cover;
+  background-position: center;
+  background-image: url('/paper-light.webp');
+  --background: #fbf6e6;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

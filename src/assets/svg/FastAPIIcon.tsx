@@ -1,12 +1,11 @@
-export default function FastAPIIcon() {
+export default function FastAPIIcon({ className }: { className?: string }) {
   return (
     <svg
       role='img'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
       id='Fastapi--Streamline-Simple-Icons'
-      height='50'
-      width='50'>
+      className={className}>
       <desc>Fastapi Streamline Icon: https://streamlinehq.com</desc>
       <title>FastAPI</title>
       <path

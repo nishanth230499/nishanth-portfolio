@@ -1,12 +1,11 @@
-export default function GraphQLIcon() {
+export default function GraphQLIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
       viewBox='0 0 24 24'
       id='Graphql--Streamline-Svg-Logos'
-      height='50'
-      width='50'>
+      className={className}>
       <desc>Graphql Streamline Icon: https://streamlinehq.com</desc>
       <path
         fill='#e535ab'

@@ -1,12 +1,11 @@
-export default function GitIcon() {
+export default function GitIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
       viewBox='0 0 24 24'
       id='Git-Icon--Streamline-Svg-Logos'
-      height='50'
-      width='50'>
+      className={className}>
       <desc>Git Icon Streamline Icon: https://streamlinehq.com</desc>
       <path
         fill='#de4c36'

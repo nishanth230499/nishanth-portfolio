@@ -1,12 +1,11 @@
-export default function PostgreSQLIcon() {
+export default function PostgreSQLIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
       viewBox='0 0 24 24'
       id='Postgresql--Streamline-Svg-Logos'
-      height='50'
-      width='50'>
+      className={className}>
       <desc>Postgresql Streamline Icon: https://streamlinehq.com</desc>
       <path
         // fill='#000000'

@@ -1,12 +1,11 @@
-export default function AWSIcon() {
+export default function AWSIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
       viewBox='0 0 24 24'
       id='Aws--Streamline-Svg-Logos'
-      height='50'
-      width='50'>
+      className={className}>
       <desc>Aws Streamline Icon: https://streamlinehq.com</desc>
       <path
         // fill='#252f3e'

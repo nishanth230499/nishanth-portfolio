@@ -1,12 +1,11 @@
-export default function FirebaseIcon() {
+export default function FirebaseIcon({ className }: { className?: string }) {
   return (
     <svg
-      width='50'
-      height='50'
       viewBox='0 0 1280 1280'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      overflow='hidden'>
+      overflow='hidden'
+      className={className}>
       <g>
         <rect
           x='0'

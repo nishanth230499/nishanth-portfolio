@@ -9,6 +9,38 @@ import useWindowDimensions from '@/hooks/useWindowDimaensions'
 import { useMemo, useRef } from 'react'
 import HTMLFlipBook from 'react-pageflip'
 
+const getPages = (dualPage) => {
+  return [
+    {
+      component: Hero,
+      type: 'right',
+    },
+    ...(dualPage
+      ? [
+          {
+            component: () => <div />,
+            type: 'left',
+          },
+        ]
+      : []),
+    {
+      title: 'About Me',
+      component: AboutMe,
+      type: 'right',
+    },
+    {
+      title: 'Skills',
+      component: Skills,
+      type: 'left',
+    },
+    {
+      title: 'Skills',
+      component: Skills,
+      type: 'right',
+    },
+  ]
+}
+
 export default function Home() {
   const bookRef = useRef()
   const { width, height } = useWindowDimensions()
@@ -20,17 +52,17 @@ export default function Home() {
     bookRef.current?.pageFlip().flipNext()
   }
 
-  const pageHeight = useMemo(() => height ?? 0, [height])
+  const pageHeight = useMemo(() => (height ? height - 48 : 0), [height])
 
   const pageWidth = useMemo(
-    () => (width ? (width <= 768 ? width : width / 2) : 0),
+    () => (width ? (width < 1024 ? width - 48 : width / 2 - 24) : 0),
     [width]
   )
 
-  const dualPage = useMemo(() => width > 768, [width])
+  const dualPage = useMemo(() => (width ? width >= 1024 : true), [width])
   return (
     <>
-      <main>
+      <main className='p-6 bg-black dark:bg-white bg-[url(/wood-bg.jpg)] bg-cover bg-center overflow-hidden'>
         <HTMLFlipBook
           ref={bookRef}
           height={pageHeight}
@@ -40,64 +72,17 @@ export default function Home() {
           swipeDistance={1000}
           // Dummy params
         >
-          <Page
-            onPreviousPage={onPreviousPage}
-            onNextPage={onNextPage}
-            dualPage={dualPage}
-            type='right'>
-            <Hero />
-          </Page>
-          {dualPage && (
+          {getPages(dualPage).map((page, index) => (
             <Page
+              key={index}
               onPreviousPage={onPreviousPage}
               onNextPage={onNextPage}
               dualPage={dualPage}
-              type='left'></Page>
-          )}
-          <Page
-            onPreviousPage={onPreviousPage}
-            onNextPage={onNextPage}
-            title='About Me'
-            dualPage={dualPage}
-            type='right'>
-            <AboutMe />
-          </Page>
-
-          <Page
-            onPreviousPage={onPreviousPage}
-            onNextPage={onNextPage}
-            title='Skills'
-            dualPage={dualPage}
-            type='left'>
-            <Skills />
-          </Page>
-
-          <Page
-            onPreviousPage={onPreviousPage}
-            onNextPage={onNextPage}
-            title='Skills'
-            dualPage={dualPage}
-            type='right'>
-            <Skills />
-          </Page>
-
-          <Page
-            onPreviousPage={onPreviousPage}
-            onNextPage={onNextPage}
-            title='Skills'
-            dualPage={dualPage}
-            type='left'>
-            <Skills />
-          </Page>
-
-          <Page
-            onPreviousPage={onPreviousPage}
-            onNextPage={onNextPage}
-            title='Skills'
-            dualPage={dualPage}
-            type='right'>
-            <Skills />
-          </Page>
+              title={page.title}
+              type={page.type}>
+              <page.component dualPage={dualPage} />
+            </Page>
+          ))}
         </HTMLFlipBook>
       </main>
       <AppFooter />

@@ -1,12 +1,11 @@
-export default function JenkinsIcon() {
+export default function JenkinsIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
       viewBox='2 4 20 12'
       id='Jenkins--Streamline-Svg-Logos'
-      height='50'
-      width='50'>
+      className={className}>
       <desc>Jenkins Streamline Icon: https://streamlinehq.com</desc>
       <path
         // fill='#d33833'

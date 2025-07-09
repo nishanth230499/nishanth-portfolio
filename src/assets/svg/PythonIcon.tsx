@@ -1,14 +1,13 @@
-export default function PythonIcon() {
+export default function PythonIcon({ className }: { className?: string }) {
   return (
     <svg
-      height='50px'
       //   style={{ enableBackground: 'new 0 0 512 512;' }}
       version='1.1'
       viewBox='0 0 512 512'
-      width='50px'
       xmlSpace='preserve'
       xmlns='http://www.w3.org/2000/svg'
-      xmlnsXlink='http://www.w3.org/1999/xlink'>
+      xmlnsXlink='http://www.w3.org/1999/xlink'
+      className={className}>
       <g id='comp_x5F_267-python'>
         <g>
           <g>

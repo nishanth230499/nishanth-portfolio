@@ -41,13 +41,13 @@ const heroLinks = [
   },
 ]
 
-export default function Hero({ responsive }: { responsive?: boolean }) {
+export default function Hero({ dualPage }: { dualPage?: boolean }) {
   // const t = await getTranslations('HomePage')
   const t = useTranslations('HomePage')
   return (
     <div
       className={classNames('flex flex-col items-center gap-4', {
-        'md:flex-row md:gap-8': responsive,
+        'lg:flex-row md:gap-8': !dualPage,
       })}>
       <Image
         src='/profile_image.jpg'
@@ -64,11 +64,13 @@ export default function Hero({ responsive }: { responsive?: boolean }) {
         height={300}
       />
       <div>
-        <h2 className='text-4xl font-bold'>
+        <h2 className='text-3xl md:text-4xl font-bold'>
           {t('hi')}, {t("i'm")}
         </h2>
-        <h2 className='text-5xl font-bold text-primary'>{t('name')}</h2>
-        <p className='my-4 text-xl'>{t('tagline')}</p>
+        <h2 className='text-4xl md:text-5xl font-bold text-primary'>
+          {t('name')}
+        </h2>
+        <p className='my-4 text-md md:text-xl'>{t('tagline')}</p>
         <div className='flex gap-4 items-center'>
           {heroLinks.map(({ Icon, name, href, expandOnHover }) => (
             <Link

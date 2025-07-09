@@ -1,11 +1,10 @@
-export default function NodeJSIcon() {
+export default function NodeJSIcon({ className }: { className?: string }) {
   return (
     <svg
-      width='81.40244'
-      height='50'
       viewBox='0 0 319 195'
       fill='none'
-      xmlns='http://www.w3.org/2000/svg'>
+      xmlns='http://www.w3.org/2000/svg'
+      className={className}>
       <g clipPath='url(#clip0_337_7901)'>
         <mask
           id='mask0_337_7901'

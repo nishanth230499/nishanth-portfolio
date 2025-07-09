@@ -1,8 +1,13 @@
-export default function DjangoIcon() {
+import classNames from 'classnames'
+
+export default function DjangoIcon({ className }: { className?: string }) {
   return (
     <svg
       // fill='#1F3E2E'
-      className='fill-current group-hover:fill-[#1F3E2E] group-focus:fill-[#1F3E2E] dark:group-hover:fill-[#fff] dark:group-focus:fill-[#fff]'
+      className={classNames(
+        'fill-current group-hover:fill-[#1F3E2E] group-focus:fill-[#1F3E2E] dark:group-hover:fill-[#fff] dark:group-focus:fill-[#fff]',
+        className
+      )}
       width='50'
       height='50'
       viewBox='0 0 24 24'

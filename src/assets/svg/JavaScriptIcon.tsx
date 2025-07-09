@@ -1,8 +1,7 @@
-export default function JavaScriptIcon() {
+export default function JavaScriptIcon({ className }: { className?: string }) {
   return (
     <svg
-      width='50px'
-      height='50px'
+      className={className}
       viewBox='0 0 256 256'
       xmlns='http://www.w3.org/2000/svg'
       preserveAspectRatio='xMinYMin meet'>

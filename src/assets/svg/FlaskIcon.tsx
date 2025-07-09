@@ -1,8 +1,6 @@
-export default function FlaskIcon() {
+export default function FlaskIcon({ className }: { className?: string }) {
   return (
     <svg
-      width='50'
-      height='50'
       viewBox='0 0 500 500'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
@@ -14,7 +12,8 @@ export default function FlaskIcon() {
         clipRule: 'evenodd',
         strokeLinejoin: 'round',
         strokeMiterlimit: '2',
-      }}>
+      }}
+      className={className}>
       <rect id='Logo' x='0' y='0' width='500' height='500' fill='none' />
       <g>
         <path

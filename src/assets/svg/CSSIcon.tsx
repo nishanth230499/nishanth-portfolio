@@ -1,8 +1,7 @@
-export default function CSSIcon() {
+export default function CSSIcon({ className }: { className?: string }) {
   return (
     <svg
-      width='50'
-      height='50'
+      className={className}
       viewBox='0 0 500 500'
       xmlns='http://www.w3.org/2000/svg'
       fillRule='evenodd'

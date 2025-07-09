@@ -21,6 +21,7 @@ import ReactIcon from '@/assets/svg/ReactIcon'
 import ReduxIcon from '@/assets/svg/ReduxIcon'
 import TypeScriptIcon from '@/assets/svg/TypeScriptIcon'
 import WebpackIcon from '@/assets/svg/WebpackIcon'
+import classNames from 'classnames'
 
 const skills = [
   { name: 'JavaScript', Icon: JavaScriptIcon },
@@ -47,17 +48,21 @@ const skills = [
   { name: 'Docker', Icon: DockerIcon },
 ]
 
-export default function Skills() {
+export default function Skills({ dualPage }: { dualPage?: boolean }) {
   return (
-    <div className='grid gap-y-4 gap-x-2 md:gap-8 grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8'>
+    <div
+      className={classNames('grid gap-y-4 gap-x-2 grid-cols-3 sm:grid-cols-4', {
+        'md:gap-8 md:grid-cols-6 xl:grid-cols-8': !dualPage,
+        'md:gap-4 md:grid-cols-5': dualPage,
+      })}>
       {skills.map(({ name, Icon }) => (
         <button
           key={name}
-          className='group hover:scale-120 focus:scale-120 transition bg-(--background) cursor-pointer'
+          className='group hover:scale-120 focus:scale-120 transition cursor-pointer'
           onClick={() => {}}>
           <div className='w-full flex flex-col items-center gap-2 p-2'>
-            <Icon />
-            <p className='text-center'>{name}</p>
+            <Icon className='h-[40px] w-[40px] md:h-[50px] md:w-[50px]' />
+            <p className='text-md md:text-lg text-center'>{name}</p>
           </div>
         </button>
       ))}
